@@ -40,7 +40,6 @@ int ternarySearch(int low, int high, int key, int arr[])
 
 int main()
 {
-    int bcomp = 0, tcomp = 0;
     int n;
     printf("Enter the n0. of elements\n");
     scanf("%d", &n);
