@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-#define INF 999999
+#define INF 999999 // assuming the cost to be very high
 
-int dp[20][20];
-int split[20][20];
+int dp[20][20];    // stores the values
+int split[20][20]; // the point where we wanna split
 
 void printOrder(int i, int j)
 {
@@ -51,7 +51,7 @@ int main()
 
             dp[i][j] = INF;
 
-            for (int k = i; k < j; k++)
+            for (int k = i; k < j; k++) // this loop is only for spliting
             {
                 int cost = dp[i][k] + dp[k + 1][j] + p[i - 1] * p[k] * p[j];
 
